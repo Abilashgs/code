@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/5/2023 1:53:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LPP2755"
+  DTS:CreatorName="CORAL\Abil755RPP2"
+  DTS:DTSID="{E6BDA1DE-2434-49DF-B0E9-02A24F3A65A8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{F24FFCCF-C51B-495C-8FC1-374E84BB2C46}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Contract_NEW_Code.sql]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{B04D87F0-B800-4054-B3D1-1F961C90788E}"
+      DTS:ObjectName="Contract_NEW_Code.sql">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\Abil755rpp2\Downloads\Contract_NEW_Code.sql" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Ramco Open Issue.xlsx]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{8BC31744-A73B-46A8-83C0-994AA1BEDAC7}"
+      DTS:ObjectName="Ramco Open Issue.xlsx">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\Abil755rpp2\Documents\Visual Studio 2017\abhi\Ramco Open Issue.xlsx" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SSIS]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{CD30A177-0CF7-4579-BD11-ED85130EF607}"
+      DTS:ObjectName="SSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Users\Abil755rpp2\Desktop\SSIS" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\File System Task"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{2F567F06-F98B-4CA5-99FC-DE798AACC95B}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File System Task"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="MoveFile"
+          TaskSourcePath="{8BC31744-A73B-46A8-83C0-994AA1BEDAC7}"
+          TaskDestinationPath="{CD30A177-0CF7-4579-BD11-ED85130EF607}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="158,42"
+          Id="Package\File System Task"
+          TopLeft="253,139" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
