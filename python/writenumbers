@@ -18,7 +18,6 @@ def Words(n):
     elif n >= 10000000:
         return Words(n // 10000000) + " Crore " + (Words(n % 10000000) if n % 10000000 != 0 else "")
 
-# Open the file for reading
 file= open("C:\\Users\\Abil755rpp2\\Documents\\my git\\code\\python\\num.txt", "r") 
 text = file.read()
 num = int(text)
