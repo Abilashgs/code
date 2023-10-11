@@ -2,7 +2,7 @@
 import openpyxl  
 
 
-wb = openpyxl.load_workbook('book1.xlsx')
+wb = openpyxl.load_workbook('C:\\Users\\Abil755rpp2\\Documents\\my git\\code\\python\\book1.xlsx')
 ws = wb.active
 print('Total number of rows: '+str(ws.max_row)+'. And total number of columns: '+str(ws.max_column))
 print('The value in cell A1 is: '+ws['A1'].value)
